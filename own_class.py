@@ -1,4 +1,4 @@
-__metaclass__ = type
+
 
 class Person:
 
@@ -11,3 +11,9 @@ class Person:
 
 	def greed(self):
 		print "hello,world! I`m %s" % self.name
+
+
+
+foo = Person()
+foo.setName('monkey')
+foo.greed()
