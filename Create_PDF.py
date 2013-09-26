@@ -15,6 +15,8 @@ for line in urlopen(URL).readlines():
 	if not line.isspace() and not line[0] in COMMENT_CHARS:
         	data.append([float(n) for n in line.split()])
 
+print data
+
 
 pred = [row[2] for row in data]
 high = [row[3] for row in data]
@@ -34,3 +36,4 @@ drawing.add(lp)
 drawing.add(String(250,150, 'Sunspots',fontSize=14,fillColor=colors.red))
 
 renderPDF.drawToFile(drawing, 'report3.pdf','Sunspots')
+
